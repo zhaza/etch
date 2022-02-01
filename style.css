@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 
+            repeat(16, 1fr);
+        grid-template-rows: 
+            repeat(16, 1fr);
+        grid-gap: 0px;
+    }
+}
+
+div {
+    padding: 0px ;
+    text-align: center;
+    border: 1px solid #dfdfdf;
+}
