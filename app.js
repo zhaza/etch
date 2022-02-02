@@ -1,4 +1,4 @@
-// clear button & create container
+// clear button & create container for grid
 const main = document.querySelector("main");
 const button = document.createElement("button");
 button.textContent = "Clear";
@@ -15,7 +15,7 @@ for (let i = 0; i <= 16*16-1; i++) {
     conquery.appendChild(grid);
 };
 
-//hover to start coloring each div black
+//hover function to start coloring each div black
 function hover() {
     const divs = document.querySelectorAll(".grid");
     
@@ -34,7 +34,7 @@ function clear() {
     }
 };
 
-//grid resize function, based off user input
+//grid resize function, based off user input && limited under 100
 function resize() {
     const regrid = prompt("What size grid would you like? (e.g.'10')");
     if (regrid < 100) {
@@ -53,9 +53,8 @@ function resize() {
     hover();
 };
 
+//button listener, to clear and resize grid with user input
 button.addEventListener("click", () => {
     clear();
     resize();
-})
-
-//prompt to generate new grid > limit 100
+});
