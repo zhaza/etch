@@ -1,16 +1,22 @@
-@media (min-width: 768px) {
-    main {
+main{
+    min-width: 100%;
+}
+@media (min-width: 400px) {
+    .container {
         display: grid;
         grid-template-columns: 
-            repeat(16, 1fr);
+            repeat(16, minmax(10px, 1fr));
         grid-template-rows: 
-            repeat(16, 1fr);
+            repeat(16, minmax(10px, 1fr));
         grid-gap: 0px;
+        max-height: 1fr;
+        max-width: 1fr;
     }
 }
 
-div {
-    padding: 0px ;
-    text-align: center;
-    border: 1px solid #dfdfdf;
+.container div {
+    padding: 1em ;
+    
+    /* text-align: center;
+    border: 1px solid #dfdfdf; */
 }
